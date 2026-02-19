@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forzahorizon</title>
+</head>
+<body>
+    <style>
+        body{
+            margin:0;
+            font-family: Arial;
+            background-color:#000;
+        }
+
+      
+        .top-bar{
+           
+            text-align:center;
+            padding:15px;
+            letter-spacing:4px;
+            font-weight:bold;
+            color:white;
+        }
+
+        /* main */
+        .hero{
+            height: 100vh;
+            background-image: url("forza.jpg");
+            background-size: 600px;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Dark overlay */
+        .overlay{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.6);
+        }
+
+       
+        .content{
+            position:absolute;
+            top:50%;
+            left:50%;
+            text-align:center;
+            color:white;
+        }
+
+        .content h1{
+            font-size:50px;
+            margin:0;
+            letter-spacing:3px;
+            
+        }
+
+        .content h2{
+            margin-top:10px;
+            color:#ff4d00;
+        }
+
+        .but{
+            display:inline-block;
+            margin-top:20px;
+            padding:10px 25px;
+            background:hotpink;
+            color:white;
+            text-decoration:none;
+            border-radius:5px;
+            font-weight:bold;
+        }
+
+        .but:hover{
+            background:orange;
+        }
+     
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        STANDARD
+    </div>
+
+    <div class="hero">
+        <div class="overlay"></div>
+
+        <div class="content">
+            <h1>FORZA HORIZON 5</h1>
+            <h2>Experience the Ultimate Racing Adventure</h2>
+            <a href="#" class="but">Pre-Order Now</a>
+            <a href="#" class="but">Features</a>
+        </div>
+    </div>
+</body>
+</html>
