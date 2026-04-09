@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prime Number</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color:antiquewhite;
+            text-align: center;
+            margin-top: 100px;
+            text-decoration: underline dotted;
+            color:darkred;
+            font-size: large;
+        }
+        .box1 {
+            background-color:cornsilk;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 30px;
+        }
+        input {
+            padding: 7px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px;
+            background-color: rgb(255, 0, 0);
+            color: white;
+            border: double;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(139, 0, 0, 0.779);
+        }
+
+        p {
+            font-weight: bold;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="box1">
+        <h2>Prime Number</h2>
+
+        <input type="numPrime" id="num" placeholder="Enter a number">
+
+        <br>
+
+        <button onclick="checkPrime()">Check</button>
+
+        <p id="result"></p>
+    </div>
+    <script>
+        function checkPrime()
+        {
+         let numPrime = document.getElementById("num").value;
+            numPrime = Number(numPrime);
+            let isPrime = true;
+
+            if (numPrime <= 1) {
+                isPrime = false;
+            } else {
+                for (let i = 2; i < numPrime; i++) {
+                    if (numPrime % i == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+
+            if (isPrime) {
+                document.getElementById("result").innerHTML = numPrime + " is a Prime Number";
+            } else {
+                document.getElementById("result").innerHTML = numPrime + " is not a Prime Number";
+            }
+        } 
+        
+    </script>
+</body>
+</html>
