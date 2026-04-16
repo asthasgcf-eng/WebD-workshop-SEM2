@@ -1,32 +1,41 @@
-let heading = document.getElementById("mainHeading");
-let paragraph = document.getElementById("paragraph");
-let input = document.getElementById("userInput");
-let fontSize = 16;
-document.getElementById("changeTextBtn").addEventListener("click", function () {
-    if (input.value !== "") {
-        heading.innerHTML = input.value;
-    }
-});
-document.getElementById("bgColorBtn").onclick = function () {
-    document.body.style.backgroundColor =
-        "#" + Math.floor(Math.random() * 16777215).toString(16);
+const heading = document.getElementById("heading");
+const para = document.getElementById("para");
+const input = document.getElementById("input");
+const textBtn = document.getElementById("textBtn");
+const bgBtn = document.getElementById("bgBtn");
+const fontBtn = document.getElementById("fontBtn");
+const toggleBtn = document.getElementById("toggleBtn");
+const resetBtn = document.getElementById("resetBtn");
+textBtn.onclick = () => {
+if (input.value !== "") {
+heading.textContent = input.value;
+input.value = "";
+} else {
+alert("Enter some text first");
+}
 };
-document.getElementById("fontSizeBtn").addEventListener("click", function () {
-    fontSize += 2;
-    paragraph.style.fontSize = fontSize + "px";
-});
-document.getElementById("toggleBtn").addEventListener("click", function () {
-    if (paragraph.style.display === "none") {
-        paragraph.style.display = "block";
-    } else {
-        paragraph.style.display = "none";
-    }
-});
-document.getElementById("resetBtn").addEventListener("click", function () {
-    heading.innerHTML = "Welcome to JavaScript Lab";
-    paragraph.style.display = "block";
-    paragraph.style.fontSize = "16px";
-    document.body.style.backgroundColor = "#f4f4f4";
-    input.value = "";
-    fontSize = 16;
-});
+bgBtn.onclick = () => {
+let randomColor = "#" + Math.floor(Math.random() * 
+16777215).toString(16);
+document.body.style.backgroundColor = randomColor;
+};
+let size = 16;
+fontBtn.onclick = () => {
+size += 2;
+para.style.fontSize = size + "px";
+};
+toggleBtn.onclick = () => {
+if (para.style.display === "none") {
+para.style.display = "block";
+} else {
+para.style.display = "none";
+}
+};
+resetBtn.onclick = () => {
+heading.textContent = "Welcome to DOM Events";
+para.style.fontSize = "16px";
+document.body.style.backgroundColor = "";
+para.style.display = "block";
+input.value = "";
+size = 16;
+}

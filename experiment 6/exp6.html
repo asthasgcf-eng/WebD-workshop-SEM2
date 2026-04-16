@@ -1,54 +1,24 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiment 6</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-      <div class="container">
-<h2>Welcome to JavaScript lab</h2>
-<input type="text" id="name" placeholder="Enter the text">
- <input type="text" id="bgcolor" placeholder="Background Colour">
-<input type="number" id="font" placeholder="Increase the font size">
-<input type="text" id="para" placeholder="Show/Hide Paragraph"> -->
-<!-- <br> -->
-<!-- <button onclick="addText()">Add text</button> -->
-<!-- <button onclick="ChangeHeading()">Change Heading</button>
-<button onclick="BackgroundColor()">Change Background Color</button>
-<button onclick="increaseFont()">Increase Font Size</button>
-<button onclick="ShowHide()">Show/Hide paragraph</button>
-<button onclick="Reset()">Reset</button>
-<p id="para">THIS IS JAVASCRIPT </p>
-
-</div>
-    <script src="main.jsx"> </script>
-</body>
-</html>  -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<title>EXPERIMENT 6</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="border">
-    <div class="container">
-    <h3 id="titleMain">WELCOME TO JAVASCRIPT LAB</h3>
-    <input id="inputHeading" type="text" placeholder="ENTER YOUR HEADING">
-    <br> <br>
-    <button style="background-color: blue;color: white" id="chngHeading">CHANGE HEADING</button>  
-    <button style="background-color: blue;color: white" id="chngbgBtn">CHANGE BACKGROUND</button> 
-    <button style="background-color: blue;color: white" id="incFontBtn">INCREASE FONT SIZE</button>
-    <button style="background-color: blue;color: white" id="hideBtn">SHOW/HIDE PARAGRAPH</button>    
-    <button style="background-color: blue;color: white" id="resetBtn">RESET</button>
-    <br>
-    <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, doloribus!</p>
-   </div> 
-   </div>
-   <script src="main.jsx"></script>
+<div id="container">
+<h1 id="heading">Welcome to Javascript Lab</h1>
+<p id="para">
+This paragraph will change using JavaScript.
+</p>
+<div id="controls">
+<input type="text" id="input" placeholder="Enter new heading">
+<button id="textBtn">Change Text</button>
+<button id="bgBtn">Change Background</button>
+<button id="fontBtn">Increase Font</button>
+<button id="toggleBtn">Show/Hide Paragraph</button>
+<button id="resetBtn">Reset</button>
+</div>
+</div>
+<script src="main.jsx"></script>
 </body>
 </html>
